@@ -5,7 +5,7 @@ metadata:
   name: frontend
   namespace: expense
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     component: frontend
     project: expense
