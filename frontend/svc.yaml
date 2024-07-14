@@ -5,13 +5,12 @@ metadata:
   name: frontend
   namespace: expense
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     component: frontend
     project: expense
     tier: web
   ports:
   - protocol: TCP
-    port: 80 #service-port
-    targetPort: 8080 #target-port
-    nodePort: 32121
+    port: 80
+    targetPort: 8080
